@@ -8,3 +8,9 @@
  */
 
 rootProject.name = 'JPABrewery'
+includeFlat 'JPACrudProject'
+
+/*
+rootProject.name = 'RocketCRUD'
+includeFlat 'JPARockets'
+*/

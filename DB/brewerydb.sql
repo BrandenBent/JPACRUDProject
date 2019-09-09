@@ -23,8 +23,17 @@ DROP TABLE IF EXISTS `breweries` ;
 CREATE TABLE IF NOT EXISTS `breweries` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `address` VARCHAR(45) NULL,
-  `close_time` VARCHAR(45) NULL,
-  `proximity` VARCHAR(45) NULL,
+  `category` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `country` VARCHAR(45) NULL,
+  `key` VARCHAR(45) NULL,
+  `latitude` VARCHAR(45) NULL,
+  `longitude` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `phone` VARCHAR(45) NULL,
+  `zipcode` INT NULL,
+  `province` VARCHAR(45) NULL,
+  `website` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

@@ -1,0 +1,3 @@
+rootProject.name = 'BreweryCRUD'
+
+includeFlat 'JPABrewery'

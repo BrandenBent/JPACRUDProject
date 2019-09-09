@@ -1,6 +1,7 @@
 package com.skilldistillery.brewery.entities;
 
-import static org.junit.Assert.assertNotNull;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +11,10 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+
 
 class BreweriesTest {
 	private static EntityManagerFactory emf;
@@ -19,7 +23,7 @@ class BreweriesTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		emf = Persistence.createEntityManagerFactory("Brewery");
+		emf = Persistence.createEntityManagerFactory("BreweryPU");
 	}
 
 	@AfterAll
@@ -30,7 +34,7 @@ class BreweriesTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		em = emf.createEntityManager();
-		breweries = em.find(Breweries.class, 1);
+		breweries = em.find(Breweries.class, 2);
 	}
 
 	@AfterEach
@@ -40,8 +44,10 @@ class BreweriesTest {
 	}
 
 	@Test
+	@DisplayName("testing entity mapping")
 	void test_Breweries_entity_mapping() {
-		assertNotNull(breweries);
+//		assertNotNull(breweries.getId());
+		assertEquals(2, breweries.getId());
 	
 	}
 
